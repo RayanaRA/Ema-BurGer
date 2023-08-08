@@ -48,32 +48,36 @@ class WellcomPage extends StatelessWidget {
                 SizedBox(
                   height: 490,
                 ),
-                Container(
-                  height: 60,
-                  width: 300,
-                  decoration: BoxDecoration(
-                    color: Colors.amber,
-                    borderRadius: BorderRadius.all(
-                      Radius.circular(30),
+                Padding(
+                  padding:
+                      const EdgeInsets.symmetric(horizontal: 30, vertical: 15),
+                  child: Container(
+                    padding: EdgeInsets.symmetric(vertical: 7),
+                    decoration: BoxDecoration(
+                      color: Colors.amber,
+                      borderRadius: BorderRadius.all(
+                        Radius.circular(30),
+                      ),
                     ),
-                  ),
-                  child: Column(
-                    children: [
-                      Center(
-                        child: InkWell(
-                          onTap: () {
-                            Get.to(LoginScreen());
-                          },
-                          child: Text(
-                            'Next',
-                            style: TextStyle(
-                                fontSize: 38,
-                                color: Colors.black54,
-                                fontWeight: FontWeight.w500),
+                    child: Column(
+                      // mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Center(
+                          child: InkWell(
+                            onTap: () {
+                              Get.to(LoginScreen());
+                            },
+                            child: Text(
+                              'Next',
+                              style: TextStyle(
+                                  fontSize: 38,
+                                  color: Colors.black54,
+                                  fontWeight: FontWeight.w500),
+                            ),
                           ),
                         ),
-                      ),
-                    ],
+                      ],
+                    ),
                   ),
                 ),
               ],
